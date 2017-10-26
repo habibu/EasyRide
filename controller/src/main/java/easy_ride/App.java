@@ -1,4 +1,4 @@
-package easy_ride;
+package easyride;
 
 /**
  * Hello world!

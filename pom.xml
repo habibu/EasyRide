@@ -1,32 +1,45 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>easy_ride</groupId>
-  <artifactId>bundle</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>core</module>
-    <module>service</module>
-    <module>dao</module>
-    <module>controller</module>
-    <module>console</module>
-  </modules>
-  <packaging>pom</packaging>
+    <groupId>easyride</groupId>
+    <artifactId>bundle</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-  <name>bundle</name>
-  <url>http://maven.apache.org</url>
+    <properties>
+        <junit.version>4.12</junit.version>
+        <easymock.version>3.5</easymock.version>
+        <log4j2.version>2.9.1</log4j2.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <properties/>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <modules>
+        <module>core</module>
+        <module>service</module>
+        <module>dao</module>
+        <module>controller</module>
+        <module>console</module>
+    </modules>
+    <packaging>pom</packaging>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+    <name>bundle</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j.iostreams</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j.core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+    </dependencies>
 </project>

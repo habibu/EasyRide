@@ -1,4 +1,4 @@
-package easy_ride;
+package easyride;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
