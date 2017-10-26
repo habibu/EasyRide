@@ -26,6 +26,15 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>easyride</groupId>
+            <artifactId>easyride-service</artifactId>
+            <version>1.0-SNAPSHOOT</version>
+        </dependency><dependency>
+        <groupId>easyride</groupId>
+        <artifactId>easyride-dao-json</artifactId>
+        <version>1.0-SNAPSHOOT</version>
+    </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junt.version}</version>
