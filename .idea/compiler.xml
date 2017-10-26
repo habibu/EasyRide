@@ -9,14 +9,9 @@
         <module name="console" />
         <module name="controller" />
         <module name="core" />
+        <module name="dao" />
         <module name="doa" />
         <module name="service" />
-      </profile>
-      <profile name="Annotation profile for bundle" enabled="true">
-        <sourceOutputDir name="../doa/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../doa/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="dao" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +21,7 @@
       <module name="dao" target="1.5" />
       <module name="doa" target="1.5" />
       <module name="easy_ride" target="1.5" />
+      <module name="easyride" target="1.5" />
       <module name="service" target="1.5" />
     </bytecodeTargetLevel>
   </component>

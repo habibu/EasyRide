@@ -6,7 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/controller/controller.iml" filepath="$PROJECT_DIR$/controller/controller.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/dao/dao.iml" filepath="$PROJECT_DIR$/dao/dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/easy_ride.iml" filepath="$PROJECT_DIR$/easy_ride.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyride.iml" filepath="$PROJECT_DIR$/easyride.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
     </modules>
   </component>
