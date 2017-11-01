@@ -1,4 +1,4 @@
-package easyride;
+package service;
 
 /**
  * Hello world!

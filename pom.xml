@@ -9,11 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-    <junit.version>4.12</junit.version>
-    <easymock.version>3.5</easymock.version>
-    <log4j2.version>2.9.1</log4j2.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <properties/>
+        <junit.version>4.12</junit.version>
+    </properties>
 
     <modules>
         <module>core</module>
@@ -32,11 +29,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j.iostreams</artifactId>
-            <version>${log4j2.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
