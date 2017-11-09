@@ -1,19 +1,20 @@
 package model;
 
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.*;
 
 public class ChargesMade
     {
-    private final Set<RentalType> rentalTypes;
-    private final Map<Cliente, String[]> carRents;
+
     private int duration;
     private float totalAmount;
+    private final Set<RentalType> rentalTypes;
+    private final Map<Cliente, String[]> carRents;
 
-    public ChargesMade(int duration, float totalAmount) {
+    public ChargesMade(int duration, float totalAmount, Set<RentalType> rentalTypes, Map<Cliente, String[]> carRents) {
         this.duration = duration;
         this.totalAmount = totalAmount;
+        this.rentalTypes = rentalTypes;
+        this.carRents = carRents;
     }
 
     public ChargesMade(int duration, Set<RentalType> rentalTypes, Map<Cliente, String[]> carRents, float totalAmount) {
@@ -54,6 +55,7 @@ public class ChargesMade
         Float amount = this.getTotalAmount();
         String[] clientRent = this.carRents.get(cliente);
         String[] carRentedByCliente = new String[clientRent.length + 1];
+
         /** Verify whether the cliente hired a car*/
         if (!this.carRents.containsKey(cliente)) {
             this.carRents.put(cliente, new String[]{carRent});
