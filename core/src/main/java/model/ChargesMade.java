@@ -2,27 +2,25 @@ package model;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class ChargesMade
     {
     private final Set<RentalType> rentalTypes;
     private final Map<Cliente, String[]> carRents;
     private int duration;
-    private float toalAmount;
+    private float totalAmount;
 
-    public ChargesMade(int duration, Set<RentalType> rentalTypes, Map<Cliente, String[]> carRents, float toalAmount) {
+    public ChargesMade(int duration, float totalAmount) {
         this.duration = duration;
-        this.rentalTypes = rentalTypes;
-        this.carRents = carRents;
-        this.toalAmount = toalAmount;
+        this.totalAmount = totalAmount;
     }
 
-    public ChargesMade(int duration, Set<RentalType> rentalTypes, Map<Cliente, String[]> carRents, float toalAmount) {
+    public ChargesMade(int duration, Set<RentalType> rentalTypes, Map<Cliente, String[]> carRents, float totalAmount) {
         this.duration = duration;
         this.rentalTypes = new HashSet<RentalType>();
-        this.carRents = new HashMap<Cliente, String>();
-        this.toalAmount = toalAmount;
+        this.carRents = new HashMap<Cliente, String[]>();
+        this.totalAmount = totalAmount;
     }
 
     public int getDuration() {
@@ -41,11 +39,29 @@ public class ChargesMade
         return carRents;
     }
 
-    public float getToalAmount() {
-        return toalAmount;
+    public float getTotalAmount() {
+        return totalAmount;
     }
 
-    public void setToalAmount(float toalAmount) {
-        this.toalAmount = toalAmount;
+    public void setTotalAmount(float totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    /**
+     * Function to calculate total amount to be paid after rental perios
+     */
+    public void carHired(Cliente cliente, CarModel carModel, RentalType rentalType, Float totalAmount, String carRent) {
+        Float amount = this.getTotalAmount();
+        String[] clientRent = this.carRents.get(cliente);
+        String[] carRentedByCliente = new String[clientRent.length + 1];
+        /** Verify whether the cliente hired a car*/
+        if (!this.carRents.containsKey(cliente)) {
+            this.carRents.put(cliente, new String[]{carRent});
+            return;
+        }
+        /** Calculate a total amount with respect to the car hiredby client*/
+
     }
     }
+
+
