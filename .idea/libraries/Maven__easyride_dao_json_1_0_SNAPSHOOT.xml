@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: easyride:dao-json:1.0-SNAPSHOOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/easyride/dao-json/1.0-SNAPSHOOT/dao-json-1.0-SNAPSHOOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/easyride/dao-json/1.0-SNAPSHOOT/dao-json-1.0-SNAPSHOOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/easyride/dao-json/1.0-SNAPSHOOT/dao-json-1.0-SNAPSHOOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
