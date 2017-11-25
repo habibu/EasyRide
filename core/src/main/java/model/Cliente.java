@@ -1,20 +1,23 @@
 package model;
 
+import model.UnderAgeClienteException.UnderAgeClienteException;
+
 import java.util.Date;
 
-public class Cliente
-    {
+import static java.lang.Integer.valueOf;
+
+public class Cliente {
     private final String firstName;
-    private final String sureName;
+    private final String surName;
     private final String email;
     private final String address;
-    private final Date birthDate;
+    private Date birthDate;
     private RentalType rentalType;
     private CarModel carModel;
 
-    public Cliente(String firstName, String sureName, String email, String address, Date birthDate, RentalType rentalType, CarModel carModel) {
+    public Cliente(String firstName, String surName, Date birthDate, RentalType rentalType, CarModel carModel) {
         this.firstName = firstName;
-        this.sureName = sureName;
+        this.surName = surName;
         this.email = email;
         this.address = address;
         this.birthDate = birthDate;
@@ -26,8 +29,8 @@ public class Cliente
         return firstName;
     }
 
-    public String getSureName() {
-        return sureName;
+    public String getsurName() {
+        return surName;
     }
 
     public String getEmail() {
@@ -57,4 +60,47 @@ public class Cliente
     public void setCarModel(CarModel carModel) {
         this.carModel = carModel;
     }
+
+    public void setBirthDate() throws UnderAgeClienteException {
+        this.birthDate = ClienteAge();
     }
+
+
+    /**
+     * Method to validate client age
+     */
+    private Date ClienteAge() throws UnderAgeClienteException {
+
+        int currentYear, birthYear, ageResult;
+
+
+        currentYear = 2017;
+        birthYear = 2000;
+        Date age = new Date(currentYear - birthYear);
+        ageResult = valueOf(String.valueOf(age));
+
+        if (ageResult <= 17) {
+
+            throw new UnderAgeClienteException("Sorry you are too young to rent a car");
+        }
+        return age;
+
+    }
+
+    /**
+     * Funcrion to chech the valid name of the cliente
+     */
+
+    @Override
+    public String toString() {
+        return firstName + " " + surName;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Cliente)) {
+            return false;
+        }
+        return firstName.equals(((Cliente) obj).firstName) && surName.equals(((Cliente) obj).surName);
+    }
+}
