@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: easyride:service:1.0-SNAPSHOOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/easyride/service/1.0-SNAPSHOOT/service-1.0-SNAPSHOOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/easyride/service/1.0-SNAPSHOOT/service-1.0-SNAPSHOOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/easyride/service/1.0-SNAPSHOOT/service-1.0-SNAPSHOOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

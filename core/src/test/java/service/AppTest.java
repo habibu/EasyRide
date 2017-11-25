@@ -3,6 +3,7 @@ package service;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import model.CarRental;
 
 /**
  * Unit test for simple Car.
@@ -15,9 +16,11 @@ public class AppTest
      *
      * @param testName name of the test case
      */
+    CarRental carRental = new CarRental();
     public AppTest( String testName )
     {
         super( testName );
+        System.out.println("Testing");
     }
 
     /**
