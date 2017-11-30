@@ -1,36 +1,37 @@
 package model;
 
-import model.UnderAgeClienteException.UnderAgeClienteException;
+import model.exceptions.UnderAgeClienteException;
 
 import java.util.Date;
 
-import static java.lang.Integer.valueOf;
+import static java.lang.String.*;
 
-public class Cliente {
+public class Cliente
+    {
     private final String firstName;
-    private final String surName;
+    private final String sureName;
     private final String email;
     private final String address;
     private Date birthDate;
     private RentalType rentalType;
-    private CarModel carModel;
+    private Car Car;
 
-    public Cliente(String firstName, String surName, Date birthDate, RentalType rentalType, CarModel carModel) {
+    public Cliente(String firstName, String sureName, String email, String address, Date birthDate, RentalType rentalType, Car Car) {
         this.firstName = firstName;
-        this.surName = surName;
+        this.sureName = sureName;
         this.email = email;
         this.address = address;
         this.birthDate = birthDate;
         this.rentalType = rentalType;
-        this.carModel = carModel;
+        this.Car = Car;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public String getsurName() {
-        return surName;
+    public String getSureName() {
+        return sureName;
     }
 
     public String getEmail() {
@@ -53,18 +54,17 @@ public class Cliente {
         this.rentalType = rentalType;
     }
 
-    public CarModel getCarModel() {
-        return carModel;
+    public Car getCar() {
+        return Car;
     }
 
-    public void setCarModel(CarModel carModel) {
-        this.carModel = carModel;
+    public void setCar(Car Car) {
+        this.Car = Car;
     }
 
     public void setBirthDate() throws UnderAgeClienteException {
         this.birthDate = ClienteAge();
     }
-
 
     /**
      * Method to validate client age
@@ -77,7 +77,7 @@ public class Cliente {
         currentYear = 2017;
         birthYear = 2000;
         Date age = new Date(currentYear - birthYear);
-        ageResult = valueOf(String.valueOf(age));
+        ageResult = new Integer(valueOf(age));
 
         if (ageResult <= 17) {
 
@@ -87,20 +87,4 @@ public class Cliente {
 
     }
 
-    /**
-     * Funcrion to chech the valid name of the cliente
-     */
-
-    @Override
-    public String toString() {
-        return firstName + " " + surName;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof Cliente)) {
-            return false;
-        }
-        return firstName.equals(((Cliente) obj).firstName) && surName.equals(((Cliente) obj).surName);
-    }
-}
