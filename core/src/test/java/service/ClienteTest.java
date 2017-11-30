@@ -38,13 +38,12 @@ public class ClienteTest extends TestCase
     }
 
 
-    /**
-     public ClienteTest( String testName )
+    public ClienteTest( String testName )
     {
 
         System.out.println("Testing");
     }
-     */
+
     @Before
     public void setUp() throws ParseException {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
